@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>TikTok — вхід завершено</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <section>
+    <h2>Вхід у TikTok завершено · TikTok login complete</h2>
+    <p>Скопіюй адресу цієї сторінки й встав її в публікатор «Подвійне дно». Сторінка нікуди нічого не надсилає:
+      код живе лише в адресному рядку твого браузера.</p>
+    <p class="muted">Copy this page’s address into Podviyne Dno Publisher. This page sends nothing anywhere.</p>
+    <p><button id="copy" type="button">Скопіювати адресу · Copy address</button> <span id="ok" class="muted"></span></p>
+  </section>
+</main>
+<script>
+  document.getElementById("copy").onclick = async () => {
+    try { await navigator.clipboard.writeText(location.href); document.getElementById("ok").textContent = "✓ скопійовано"; }
+    catch (e) { document.getElementById("ok").textContent = "скопіюй з адресного рядка"; }
+  };
+</script>
+</body>
+</html>
